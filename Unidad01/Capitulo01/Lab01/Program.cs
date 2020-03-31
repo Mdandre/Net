@@ -12,6 +12,6 @@ namespace Lab01
         {
             System.Console.Write("Hola Mundo");
             System.Console.ReadLine();
-        }
+            }
     }
 }
