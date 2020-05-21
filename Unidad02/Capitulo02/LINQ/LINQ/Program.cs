@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,11 @@ namespace LINQ
 
         }
     }*/
-    /*Ejercicio2*/
+    /*Ejercicio2
    class Program
    {
        static void Main(string[] args)
-       {
-            /*Lista <string> listaInt = new Lista<string>();*/
+       {           
             ArrayList Listado = new ArrayList();
             string rta = "S";
             while (rta != "N")
@@ -47,5 +47,47 @@ namespace LINQ
            }
 
        }
+   }*/
+    /*Ejercicio2*/
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Ciudad[] list =
+            {
+                new Ciudad (1, "Buenos Aires"),
+                new Ciudad (2, "Rosario"),
+                new Ciudad (3, "Mar del Plata"),
+                new Ciudad (4, "Ushuaia"),
+                new Ciudad (5, "Ciudad de Cordoba"),
+                new Ciudad (6, "San Carlos de Bariloche"),
+                new Ciudad (7, "Ciudad de Santiago del Estero"),
+                new Ciudad (8, "San Miguel de Tucuman"),
+                new Ciudad (9, "Salta"),
+                new Ciudad (10, "Mendoza"),
+            };
+           Console.WriteLine("Ingrese tres letras para buscar coincidencia");
+           string rta = Console.ReadLine();
+            var City = from d in list
+                       where d.Nombre == rta
+                       select d;
+            Console.WriteLine(City.ImprimirCod());
+            Console.ReadLine();
+        } 
+        public class Ciudad
+        {
+            public int Codigo { get; set; }
+            public string Nombre { get; set; }
+
+            public Ciudad (int Codigo, string Nombre)
+            {
+                this.Codigo = Codigo;
+                this.Nombre = Nombre;  
+            }
+            public int ImprimirCod()
+            {
+                return Codigo;
+            }
+        }
    }
 }
