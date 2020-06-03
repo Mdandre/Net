@@ -9,6 +9,7 @@ namespace AdivineElJuego
     public class Juego
     {
         private int _record;
+        private jugada jugada;
 
         public Juego()
         {
@@ -20,22 +21,22 @@ namespace AdivineElJuego
             throw new System.NotImplementedException();
         }
 
-        private void CompararRecord()
+        public void CompararRecord()
         {
             throw new System.NotImplementedException();
         }
 
-        private void Continuar()
+        public void Continuar()
         {
             throw new System.NotImplementedException();
         }
 
-        private void PreguntarMaximo()
+        public void PreguntarMaximo()
         {
             throw new System.NotImplementedException();
         }
 
-        private void PreguntarNumero()
+        public void PreguntarNumero()
         {
             throw new System.NotImplementedException();
         }

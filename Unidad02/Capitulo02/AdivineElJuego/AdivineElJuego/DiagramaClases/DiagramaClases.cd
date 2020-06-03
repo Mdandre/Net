@@ -3,7 +3,7 @@
   <Class Name="AdivineElJuego.Juego">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAACIAAAAAAAAAAAAAAAAAAgBIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAACIAAAAAAAAAAAAAAAAAAgBMAAAAAAA=</HashCode>
       <FileName>Juego.cs</FileName>
     </TypeIdentifier>
   </Class>

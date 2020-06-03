@@ -17,7 +17,9 @@ namespace LabSintaxis3
                 System.Console.WriteLine("Ingrese una palabra");
                 palabras[cantIteraciones] = Console.ReadLine();
             }
-            for(int cantIteraciones = 4; cantIteraciones >= 0; cantIteraciones --)
+            System.Console.WriteLine("Presione una tecla para continuar"); Console.ReadKey();
+            Console.Clear();
+            for (int cantIteraciones = 4; cantIteraciones >= 0; cantIteraciones --)
             {
                 Console.WriteLine("Palabra posicion  " + cantIteraciones + "\r\n" + palabras[cantIteraciones]);
             }
