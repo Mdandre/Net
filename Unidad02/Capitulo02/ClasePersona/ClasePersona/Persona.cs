@@ -10,52 +10,54 @@ namespace ClasePersona
     {
         private String _nombre;
         private String _apellido;
-        private int _edad;
         private int _DNI;
         private DateTime _fechaNac;
 
-        public Persona(String nombre, String apellido, int edad, int DNI, DateTime fechaNac)
+        public Persona(String nombre, String apellido, int DNI, DateTime fechaNac)
         {
-
-            this._nombre = nombre;
-            this._apellido = apellido;
-            this._edad = GetAge(fechaNac, DateTime.Now);
-            this._DNI = DNI;
-            this._fechaNac = fechaNac;
+            _nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
+            _apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
+            _fechaNac = fechaNac;
+            _DNI = DNI;
             Console.WriteLine("Persona creada");
-            Console.WriteLine();
         }
         ~Persona()
         {
             Console.WriteLine("Datos persona destruidos");
         }
-        public void GetFullName(string nombre, string apellido)
+        public string GetFullName()
         {
-            this._nombre = nombre;
-            this._apellido = apellido;
-            Console.WriteLine(nombre, apellido);
+            return _nombre + _apellido;
         }
-        public int GetAge(DateTime fechaNac, DateTime now)
+        public int GetAge()
         {
-            int edad = now.Year - fechaNac.Year;
-            if (now.Month < fechaNac.Month || (now.Month == fechaNac.Month && now.Day < fechaNac.Day))
+            int edad = DateTime.Now.Year - _fechaNac.Year;
+            if (DateTime.Now.Month < _fechaNac.Month || (DateTime.Now.Month == _fechaNac.Month && DateTime.Now.DayOfYear < _fechaNac.Day))
                 edad--;
             return edad;
         }
 
         public string apellido
         {
-            get => default;
+            get
+            {
+                return _apellido;
+            }
             set
             {
+                _apellido = value;
             }
         }
 
         public string nombre
         {
-            get => default;
+            get
+            {
+                return _nombre;
+            }
             set
             {
+                _nombre = value;
             }
         }
 
@@ -69,17 +71,25 @@ namespace ClasePersona
 
         public int DNI
         {
-            get => default;
+            get
+            {
+                return _DNI;
+            }
             set
             {
+                _DNI = value;
             }
         }
 
         public DateTime fechaNac
         {
-            get => default;
+            get
+            {
+                return _fechaNac;
+            }
             set
             {
+                _fechaNac = value;
             }
         }
     }

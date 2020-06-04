@@ -5,63 +5,35 @@ using System.Text;
 
 namespace Geometria
 {
-    public class Triangulo:Poligono
+    public class Triangulo
     {
-        private int _Altura;
-        private int _Base;
-        private int _L;
-        private int _M;
-        private int _N;
+        private double _Altura;
+        private double _Base;
+        private double _L;
+        private double _M;
+        private double _N;
 
-        public int Base
+        public double Base { get; set; }
+        public double Altura { get; set; }
+        public double M { get; set; }
+        public double N { get; set; }
+        public double L { get; set; }
+        public Triangulo(double m, double n, double l, double basex, double altura)
         {
-            get => default;
-            set
-            {
-            }
+            Base = basex;
+            Altura = altura;
+            M = m;
+            N = n;
+            L = l;
+        }
+        public double    CalcularPerimetro()
+        {
+            return M + N + L;
         }
 
-        public int Altura
+        public double CalcularSuperficie( )
         {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int M
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int N
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int L
-        {
-            get => default;
-            set
-            {
-            }
-        }
-        public int CalcularPerimetro(int L, int M, int N)
-        {
-            perimetro = L + N + M;
-            return perimetro;
-        }
-
-        public int CalcularSuperficie(int Base, int Altura)
-        {
-            superficie = (Base * Altura) / 2;
-            return superficie;
+            return (Base + Altura) / 2;
         }
     }
 }

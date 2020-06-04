@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AdivineElJuego.Juego">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAACIAAAAAAAAAAAAAAAAAAgBMAAAAAAA=</HashCode>
+      <FileName>Juego.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdivineElJuego.JugadaConAyuda">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>JugadaConAyuda.cs</FileName>
+      <NewMemberFileName>Jugada.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdivineElJuego.Program">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdivineElJuego.Jugada">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAAAAAAAQAAAAAAAAAARAAAAAAAAAAAAAAABEAA=</HashCode>
+      <FileName>Jugada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

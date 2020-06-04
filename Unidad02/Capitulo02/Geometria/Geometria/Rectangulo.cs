@@ -5,33 +5,25 @@ using System.Text;
 
 namespace Geometria
 {
-    public class Rectangulo:Poligono
+    public class Rectangulo : Poligono
     {
-        public int LadoA
+        public double LadoA { get; set; }
+        public double LadoB { get; set; }
+
+        public Rectangulo(double ladoA, double ladoB)
         {
-            get => default;
-            set
-            {
-            }
+            LadoA = ladoA;
+            LadoB = ladoB;
         }
 
-        public int LadoB
+        public override double CalcularPerimetro()
         {
-            get => default;
-            set
-            {
-            }
-        }
-        public int CalcularPerimetro(int L, int M)
-        {
-            perimetro = L* 2 + M *2;
-            return perimetro;
+            return 2*(LadoA+LadoB);
         }
 
-        public int CalcularSuperficie(int Base, int Altura)
+        public override double CalcularSuperficie()
         {
-            superficie = (Base * Altura);
-            return superficie;
+            return LadoA* LadoB;
         }
     }
 }

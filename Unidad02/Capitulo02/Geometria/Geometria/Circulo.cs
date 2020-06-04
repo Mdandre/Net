@@ -3,50 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Double;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Geometria
 {
     public class Circulo
     {
         private double m_radio;
-        private double _perimetro;
-        private double _superficie;
-
+        
         public double Radio
         {
-            get => default;
+            get
+            {
+                return m_radio;
+            }
             set
             {
+                m_radio = value;
             }
         }
-
-        public double perimetro
+        public Circulo(int radio)
         {
-            get => default;
-            set
-            {
-            }
+            Radio = radio;
         }
 
-        public double superficie
+        public double CalcuarPerimetro()
         {
-            get => default;
-            set
-            {
-            }
+            return 2 * Math.PI * m_radio;
         }
 
-        public double CalcuarPerimetro(double R)
+        public double CalcularSuperficie()
         {
-            perimetro = 2 * 3.1415 * R;
-            return perimetro;
-        }
-
-        public double CalcularSuperficie(double R)
-        {
-            superficie= 3.1416*R*R;
-            return superficie;
+            return Math.PI*Math.Pow(m_radio,2);
         }
     }
 }

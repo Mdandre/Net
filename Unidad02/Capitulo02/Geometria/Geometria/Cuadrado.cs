@@ -5,25 +5,11 @@ using System.Text;
 
 namespace Geometria
 {
-    public class Cuadrado:Poligono
+    public class Cuadrado : Rectangulo
     {
-        public int Lado
+        public Cuadrado(double lado) : base(lado, lado)
         {
-            get => default;
-            set
-            {
-            }
-        }
-        public int CalcularPerimetro(int L)
-        {
-            perimetro = L * 4;
-            return perimetro;
         }
 
-        public int CalcularSuperficie(int L)
-        {
-            superficie = L*L;
-            return superficie;
-        }
     }
 }
