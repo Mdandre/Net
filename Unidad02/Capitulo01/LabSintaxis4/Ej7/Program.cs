@@ -18,17 +18,24 @@ namespace Ej7
             {
                 intentos++;
                 Console.WriteLine("Ingrese la constraseña: ");
-                if (contraseña == Console.ReadLine())
+                string contraIng = Console.ReadLine();
+                if (contraseña == contraIng)
                 {
-                    Console.WriteLine("Contraseña correcta...");
+                    Console.WriteLine("Clave correcta...FIN");
+                    Console.ReadKey();
                     break;
                 }
-                else if (intentos == 4)
+                else if (contraseña != contraIng)
                 {
-                    Console.WriteLine("Número máximo de intentos alcanzado. Su cuenta ha sido bloqueada.");
+                    Console.WriteLine("Clave incorrecta... intento" + intentos);
+                        if (intentos == 4)
+                        {
+                            Console.WriteLine("Número máximo de intentos alcanzado. FIN.");
+                            Console.ReadKey();
+                        }
                 }
+                 
             }
-            Console.ReadKey();
         }
     }
 }
