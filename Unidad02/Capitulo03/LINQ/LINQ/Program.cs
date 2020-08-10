@@ -5,6 +5,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Linq.SqlClient;
 
 namespace LINQ
 {
@@ -68,10 +69,13 @@ namespace LINQ
             };
            Console.WriteLine("Ingrese tres letras para buscar coincidencia");
            string rta = Console.ReadLine();
-            var City = from d in list
-                       where d.Nombre == rta
+            var city = from d in list
+                       where SqlMethods.Like(d.Nombre, "% + rta + %") 
                        select d;
-            Console.WriteLine(City.ImprimirCod());
+            foreach (var a in city)
+            {
+                Console.WriteLine(a);
+            }
             Console.ReadLine();
         } 
         public class Ciudad
