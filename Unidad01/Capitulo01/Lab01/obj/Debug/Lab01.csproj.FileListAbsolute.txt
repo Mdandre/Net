@@ -1,6 +1,0 @@
-C:\Net\Unidad01\Capitulo01\Lab01\bin\Debug\Lab01.exe.config
-C:\Net\Unidad01\Capitulo01\Lab01\bin\Debug\Lab01.exe
-C:\Net\Unidad01\Capitulo01\Lab01\bin\Debug\Lab01.pdb
-C:\Net\Unidad01\Capitulo01\Lab01\obj\Debug\Lab01.csprojAssemblyReference.cache
-C:\Net\Unidad01\Capitulo01\Lab01\obj\Debug\Lab01.exe
-C:\Net\Unidad01\Capitulo01\Lab01\obj\Debug\Lab01.pdb
